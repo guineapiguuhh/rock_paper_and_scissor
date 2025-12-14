@@ -1,0 +1,9 @@
+[package]
+name = "rock_paper_and_scissor"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+enable-ansi-support = "0.3.1"
+owo-colors = "4.2.3"
+rand = "0.9.2"
