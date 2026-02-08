@@ -4,9 +4,6 @@ use crate::game::play::Play;
 pub struct Player {
     pub name: String,
     pub play: Play,
-
-    pub score: u32,
-    pub defeats: u32,
 }
 
 impl Player {
@@ -14,9 +11,11 @@ impl Player {
         Self {
             name,
             play: Play::Rock,
-            score: 0,
-            defeats: 0,
         }
+    }
+
+    pub fn new_with_play(name: String, play: Play) -> Self {
+        Self { name, play }
     }
 
     pub fn fight<'a>(&'a self, opponent: &'a Player) -> FightResult<'a> {
